@@ -1,65 +1,343 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ThemeToggle } from "./theme-toggle";
+import SwiperComponent from "@/components/ui/SwiperComponent";
+
 
 export default function Home() {
+        {/*Array of Tools Data*/}
+      const tools = [
+        {
+          name: "DXP Command Centre",
+          image: "/NewRB.png",
+          href: "https://techsolutionsdashboards.empireco.ca/dashboard/119df35b-3209-4254-8ba3-4697f3bee82b?selected-page=NzA4NzAyfFZJWnxEQVNIQk9BUkR8NDcwMDYzMjA",
+          description: "Track, Troubleshoot, and Optimize"
+        },
+        
+        {
+          name: "Place Holder",
+          image: "/",
+          href: "",
+        },
+
+        {
+          name: "Place Holder",
+          image: "/",
+          href: "",
+        },
+
+        {
+          name: "Place Holder",
+          image: "/",
+          href: "",
+        },
+      ];
+
+      const shareData = [
+          {time:"9AM", value: 44},
+          {time:"10AM", value: 46},
+          {time:"11AM", value: 45},
+          {time:"12PM", value: 48},
+          {time:"1PM", value: 47},
+          {time:"2PM", value: 46},
+          {time:"3PM", value: 50},
+          {time:"4PM", value: 40},
+          {time:"5PM", value: 53},
+      ];
+
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+     <div className="min-h-screen dark:bg-[#050814] dark:text-white bg-[#f7f7fb] text-zinc-950 transition-all duration-300">
+      <header className="absolute top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-xl border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-8 py-6 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/e.png"
+              alt="Logo"
+              width={150}
+              height={40}
+              priority
+              className="rounded-sm"
+            />
+          </div>
+          {/*Nav Bar*/}
+          <div className="ml-auto mr-6 flex items-center space-x-9 text-base font-bold">
+            
+          <Link href="/" className="text-sm font-medium text-zinc-300 transition hover:text-white">
+            Place Holder
+          </Link>
+          
+          <Link href="" className="text-sm font-medium text-zinc-300 transition hover:text-white">
+            Place Holder
+          </Link>
+          
+          <Link href="" className="text-sm font-medium text-zinc-300 transition hover:text-white">
+            Place Holder
+          </Link>
+          
+          <Link href="https://www.empireco.ca/quarterly-reports" className="text-sm font-medium text-zinc-300 transition hover:text-white">
+            Quarterly Reports
+          </Link>
+          </div>
+          <ThemeToggle/>
+        </div>
+        </header>
+
+
+        {/* Hero */}
+        <section className="relative overflow-hidden border-b border-white/10">
+
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-50"
+          style={{
+          backgroundImage: "url('/her.jpg')",
+           }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#050814] via-[#050814]/80 to-transparent" />
+
+        {/* Purple Glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(139,92,246,0.25),transparent_40%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#050814] " />
+        {/* Content */}
+        <div className="relative z-10 mx-auto max-w-7xl px-8 py-44 pb-28">
+        <h1 className="max-w-2xl text-5xl font-bold leading-tight text-white">
+          Technology Solutions
+        <span className="text-purple-400"> Quick Start</span>
+        </h1>
+
+        <div className="mt-6 h-1 w-20 rounded-full bg-purple-500" />
+        </div>
+        </section>
+
+        <main className="relative z-20 mx-auto -mt-20 max-7xl px-8 pb-10">
+        {/*Boxes inside the body of the page*/}  
+          <div className="grid grid-cols-4 gap-2">
+
+            {tools.map((tool, i) => (
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+            key={i}
+            href={tool.href}
+            target="_blank"
+            className="
+            relative
+            group
+            h-44
+            rounded-3xl
+            overflow-hidden
+            hover:shadow-[0_0_30px_rgba(255,241,144,0.40)]
+            hover:scale-105
+            bg-conic/decreasing
+            bg-gradient-to-r from-[#340854] to-[#0B1124]
+            transition-all
+            duration-300
+            p-5
+            m-3
+            "
+          >
+
+          {/*Box image*/}
+          <div
+            className="absolute -inset-10 bg-contain bg-center transition-transform duration-300 group-hover:scale-110"
+            style={{
+              backgroundImage: `url(${tool.image})`,
+            }}
+          />
+
+          {/* Dark Overlay */}
+          <div
+            className="
+            absolute
+            inset-0
+           bg-black/50
+           group-hover:bg-black/65
+            transition-all
+            duration-300
+          "
+          />
+
+          {/*Box text*/}
+          <div className="absolute bottom-2 left-5 right-5 z-10">
+          <p className="
+            text-sm text-zinc-200
+            opacity-0
+            translate-y-4
+            transition-all duration-300
+            group-hover:opacity-200
+            group-hover:translate-y-1
+            mb-2
+          ">
+          {tool.description}
+          </p>
+        <h3 className="text-lg text-white">
+          {tool.name}
+        </h3>
+        </div>
+        </a>
+        ))}
+
+      </div>
+
+    {/*New share and news section */}
+     <div className="grid grif-col-1 lg:grid-cols-2">
+      {/*News*/}
+      <div>
+        <section 
+        className="
+        rounded-3xl
+        border border-white/10
+        bg-[radial-gradient(circle_at_110%_-10%,rgba(124,58,237,0.60),transparent_60%),radial-gradient(circle_at_-10%_110%,rgba(67,56,202,0.70),transparent_60%)]
+        p-6
+        mt-6
+        backdrop-blur-xl
+        ">
+        <div className="mb-6 flex items-center justify-between">
+          <h2 className="text-lg font-semibold ">
+            Latest News
+          </h2>
+          
+          <button className="text-sm text-purple-600 hover:text-purple-700">
+            View All 
+          </button>
+        </div>
+        <div className="space-y-4">
+          {[
+            "place holder",
+            "some news",
+            "News from empire",
+          ].map((news,index) => (
+            <div key={index} 
+            className="flex item-start gap-4 
+            rounded-2xl
+            border border-white/50
+            bg-white/[0.09]
+            p-4
+            transition-all
+            duration-300
+            hover:border-purple-400/30
+            hover:bg-white/[0.04]
+            "
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+            <div className="mt-2 h-2 w-2 rounded-full bg-purple-500"/>
+            <div className="font-medium">
+              <h3>
+                {news}
+              </h3>
+
+            <p className="mt-1 text-sm ">
+              June 10
+            </p>
+        </div>
+        </div>
+        ))}
+        </div>
+        </section>
+      </div>
+    {/*Share*/}
+      <section className="mx-auto mt-6 max-w-3xl">
+        <div className="
+        relative
+        overflow-hidden
+        rounded-3xl
+        border border-violet/30
+        bg-[#F172A]/80
+        p-7.5
+        backdrop-blur-xl
+        ">
+
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_100%_0%,rgba(167,85,247,0.60),transparent_65%)]"/>
+
+        <div className="relative z_10">
+        <div className="flex items-center justify-between">
+        <h3 className="text-lg fornt-semibold">
+          Empire Share 
+        </h3>
+
+        <span className="text-sm text-green-500">
+          ● Market Open
+        </span>
+        </div>
+
+        <div className="mt-4">
+          <h2 className="text-5xl font-bold">
+            $48.12
+          </h2>
+
+          <p className="mt-2 text-green-500">
+            ▲ 2.34% Today
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+ 
+        <div className="mt-8 h-40">
+          <svg
+            viewBox="0 0 300 120"
+            className="h-full w-full"
+            fill="none"
+            >
+            <path
+              d="
+              M0 95
+              L20 90
+              L40 70
+              L60 60
+              L80 75
+              L100 65
+              L120 45
+              L140 50
+              L160 70
+              L180 60
+              L200 68
+              L220 40
+              L240 55
+              L260 45
+              L280 35
+              L300 10
+              "
+              stroke="#8b5cf6"
+              strokeWidth="3"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />  
+            </svg>
         </div>
+        </div>
+        </div>
+      </section>
+      </div>
+      <div className="mt-20 mb-10">
+        <SwiperComponent />
+      </div>
       </main>
-    </div>
+
+      {/*Footer*/}
+     <footer className="bg-white/5 backdrop-blur-xl border-t border-white/10">
+  <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-9 py-7 text-sm md:flex-row">
+          {/*Logo*/}
+          <div className="flex-col intems-center gap-6">
+            <div className="rounded-xl">
+            <Image
+              src="/EMP.png"
+              alt="Footer Logo"
+              width={100}
+              height={50} 
+            />
+            </div>
+            <p className="text-zinc-400 text-sm mt-2">
+            © 2026 Empire Company Limited 
+            </p>
+          </div>
+          <div className="felx-col text-sm">
+            <p className="text-mauve-300">Contact Us</p>
+            <div className="h-1 w-30 bg-gradient-to-r from-purple-500 to-purple-800 rounded-full mt-1 mb-3" />
+            <p className=" text-mauve-300">902 752-8371</p>
+            <Link href="https://www.empireco.ca/contact" className="hover:text-mauve-100 text-mauve-300">Contact Form →</Link>
+            <p className=" text-mauve-300">115 King Street Stellarton B0K 1S0</p>
+          </div>
+        </div>
+      </footer>
+     </div>
   );
 }
