@@ -49,7 +49,7 @@ export default function Home() {
   return (
      <div className="min-h-screen dark:bg-[#050814] dark:text-white bg-[#f7f7fb] text-zinc-950 transition-all duration-300">
       <header className="absolute top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-xl border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-8 py-6 flex items-center justify-between">
+        <div className="mx-auto max-w-7xl px-4 md:px-8 py-4 md:py-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image
               src="/e.png"
@@ -61,21 +61,21 @@ export default function Home() {
             />
           </div>
           {/*Nav Bar*/}
-          <div className="ml-auto mr-6 flex items-center space-x-9 text-base font-bold">
+          <div className="ml-auto mr-6 flex items-center gap-4 md:gap-9 text-sm md:text-base font-bold">
             
-          <Link href="/" className="text-sm font-medium text-zinc-300 transition hover:text-white">
+          <Link href="/" className="font-medium text-zinc-300 transition hover:text-white">
             Place Holder
           </Link>
           
-          <Link href="" className="text-sm font-medium text-zinc-300 transition hover:text-white">
+          <Link href="" className="font-medium text-zinc-300 transition hover:text-white">
             Place Holder
           </Link>
           
-          <Link href="" className="text-sm font-medium text-zinc-300 transition hover:text-white">
+          <Link href="" className="font-medium text-zinc-300 transition hover:text-white">
             Place Holder
           </Link>
           
-          <Link href="https://www.empireco.ca/quarterly-reports" className="text-sm font-medium text-zinc-300 transition hover:text-white">
+          <Link href="https://www.empireco.ca/quarterly-reports" className="font-medium text-zinc-300 transition hover:text-white">
             Quarterly Reports
           </Link>
           </div>
@@ -102,8 +102,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(139,92,246,0.25),transparent_40%)]" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#050814] " />
         {/* Content */}
-        <div className="relative z-10 mx-auto max-w-7xl px-8 py-44 pb-28">
-        <h1 className="max-w-2xl text-5xl font-bold leading-tight text-white">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-8 py-32 md:py-44 pb-20 md:pb-28">
+        <h1 className="max-w-2xl text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
           Technology Solutions
         <span className="text-purple-400"> Quick Start</span>
         </h1>
@@ -112,9 +112,9 @@ export default function Home() {
         </div>
         </section>
 
-        <main className="relative z-20 mx-auto -mt-20 max-7xl px-8 pb-10">
+        <main className="relative z-20 mx-auto -mt-20 max-w-7xl px-4 md:px-8 pb-10">
         {/*Boxes inside the body of the page*/}  
-          <div className="grid grid-cols-4 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
             {tools.map((tool, i) => (
             <a
@@ -124,7 +124,7 @@ export default function Home() {
             className="
             relative
             group
-            h-44
+            h-52 md:h-44
             rounded-3xl
             overflow-hidden
             hover:shadow-[0_0_30px_rgba(255,241,144,0.40)]
@@ -133,8 +133,8 @@ export default function Home() {
             bg-gradient-to-r from-[#340854] to-[#0B1124]
             transition-all
             duration-300
-            p-5
-            m-3
+            p-4 md:p-5
+            m-0
             "
           >
 
@@ -181,7 +181,7 @@ export default function Home() {
       </div>
 
     {/*New share and news section */}
-     <div className="grid grif-col-1 lg:grid-cols-2">
+     <div className="grid grid-col-1 lg:grid-cols-2 gap-6">
       {/*News*/}
       <div>
         <section 
@@ -235,8 +235,8 @@ export default function Home() {
         </div>
         </section>
       </div>
-    {/*Share*/}
-      <section className="mx-auto mt-6 max-w-3xl">
+    {/*Stock*/}
+      <section className="w-full mt-6">
         <div className="
         relative
         overflow-hidden
@@ -261,7 +261,7 @@ export default function Home() {
         </div>
 
         <div className="mt-4">
-          <h2 className="text-5xl font-bold">
+          <h2 className="text-3xl md:text-5xl font-bold">
             $48.12
           </h2>
 
@@ -314,9 +314,9 @@ export default function Home() {
 
       {/*Footer*/}
      <footer className="bg-white/5 backdrop-blur-xl border-t border-white/10">
-  <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-9 py-7 text-sm md:flex-row">
+  <div className="mx-auto flex max-w-7xl flex-col md:flex-row items-center md:items-start justify-between gap-8 px-4 md:px-9 py-7 text-sm">
           {/*Logo*/}
-          <div className="flex-col intems-center gap-6">
+          <div className="flex flex-col items-center md:items-start gap-2">
             <div className="rounded-xl">
             <Image
               src="/EMP.png"
@@ -329,7 +329,7 @@ export default function Home() {
             © 2026 Empire Company Limited 
             </p>
           </div>
-          <div className="felx-col text-sm">
+          <div className="flex flex-col text-sm items-center md:items-start">
             <p className="text-mauve-300">Contact Us</p>
             <div className="h-1 w-30 bg-gradient-to-r from-purple-500 to-purple-800 rounded-full mt-1 mb-3" />
             <p className=" text-mauve-300">902 752-8371</p>
