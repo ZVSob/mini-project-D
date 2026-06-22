@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import StockApp from "@/components/ui/StockApp";
 import { ThemeToggle } from "./theme-toggle";
 import SwiperComponent from "@/components/ui/SwiperComponent";
 
@@ -52,7 +53,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 md:px-8 py-4 md:py-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image
-              src="/e.png"
+              src="/enobg.png"
               alt="Logo"
               width={150}
               height={40}
@@ -204,8 +205,8 @@ export default function Home() {
         </div>
         <div className="space-y-4">
           {[
-            "place holder",
-            "some news",
+            "News place holder",
+            "News",
             "News from empire",
           ].map((news,index) => (
             <div key={index} 
@@ -330,11 +331,11 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col text-sm items-center md:items-start">
-            <p className="text-mauve-300">Contact Us</p>
+            <p className="text-mauve-400">Contact Us</p>
             <div className="h-1 w-30 bg-gradient-to-r from-purple-500 to-purple-800 rounded-full mt-1 mb-3" />
-            <p className=" text-mauve-300">902 752-8371</p>
-            <Link href="https://www.empireco.ca/contact" className="hover:text-mauve-100 text-mauve-300">Contact Form →</Link>
-            <p className=" text-mauve-300">115 King Street Stellarton B0K 1S0</p>
+            <p className=" text-mauve-400">902 752-8371</p>
+            <Link href="https://www.empireco.ca/contact" className="hover:text-mauve-100 text-mauve-400">Contact Form →</Link>
+            <p className=" text-mauve-400">115 King Street Stellarton B0K 1S0</p>
           </div>
         </div>
       </footer>
