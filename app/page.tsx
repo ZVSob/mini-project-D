@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import StockApp from "@/components/ui/StockApp";
+//import StockApp from "@/components/ui/StockApp";
 import { ThemeToggle } from "./theme-toggle";
 import SwiperComponent from "@/components/ui/SwiperComponent";
 
