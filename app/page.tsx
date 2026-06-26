@@ -54,19 +54,19 @@ export default function Home() {
           {/*Nav Bar*/}
           <div className="ml-auto mr-6 flex items-center gap-4 md:gap-9 text-sm md:text-base font-bold">
             
-          <Link href="/" className="font-medium text-zinc-300 transition hover:text-white">
+          <Link href="/" className="animate-popIn font-medium text-zinc-300 transition hover:text-white">
             Place Holder
           </Link>
 
-          <Link href="" className="font-medium text-zinc-300 transition hover:text-white">
+          <Link href="" className="animate-popIn font-medium text-zinc-300 transition hover:text-white">
             Place Holder
           </Link>
           
-          <Link href="" className="font-medium text-zinc-300 transition hover:text-white">
+          <Link href="" className="animate-popIn font-medium text-zinc-300 transition hover:text-white">
             Place Holder
           </Link>
           
-          <Link href="https://www.empireco.ca/quarterly-reports" className="font-medium text-zinc-300 transition hover:text-white">
+          <Link href="https://www.empireco.ca/quarterly-reports" className="animate-popIn font-medium text-zinc-300 transition hover:text-white">
             Quarterly Reports
           </Link>
           </div>
@@ -76,7 +76,7 @@ export default function Home() {
 
 
         {/* Hero */}
-        <section className="relative overflow-hidden border-b border-white/10">
+        <section className="relative overflow-hidden">
 
         {/* Background Image */}
         <div
@@ -94,12 +94,12 @@ export default function Home() {
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#050814] " />
         {/*Content*/}
         <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-8 py-32 md:py-44 pb-20 md:pb-28">
-        <h1 className="max-w-2xl text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+        <h1 className="max-w-2xl animate-fadeUp text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
           Technology Solutions
         <span className="text-purple-400"> Quick Start</span>
         </h1>
 
-        <div className="mt-6 h-1 w-20 rounded-full bg-purple-500" />
+        <div className="animate-fadeUp mt-6 h-1 w-20 rounded-full bg-purple-500" />
         </div>
         </section>
 
@@ -117,6 +117,7 @@ export default function Home() {
             group
             h-52 md:h-44
             rounded-3xl
+            animate-slideLeft
             overflow-hidden
             hover:shadow-[0_0_30px_rgba(255,241,144,0.40)]
             hover:scale-105
@@ -127,6 +128,9 @@ export default function Home() {
             p-4 md:p-5
             m-0
             "
+            style={{
+            animationDelay: `${i * 280}ms`,
+            }}
           >
 
           {/*Box image*/}
@@ -177,6 +181,7 @@ export default function Home() {
         <section 
         className="
         rounded-3xl
+        animate-SlideUp
         border border-white/10
         bg-[radial-gradient(circle_at_110%_-10%,rgba(124,58,237,0.60),transparent_60%),radial-gradient(circle_at_-10%_110%,rgba(67,56,202,0.70),transparent_60%)]
         p-6
