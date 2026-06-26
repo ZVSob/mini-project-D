@@ -199,9 +199,9 @@ export default function Home() {
         </div>
         <div className="space-y-4">
           {[
-            "News place holder",
-            "News",
-            "News from empire",
+            "Empire Announces Renewal of Normal Course Issuer Bid",
+            "Empire Reports EPS of $0.94 in the Fourth Quarter and Fiscal 2026 Results",
+            "Empire Announces Agreement to Acquire Montreal's Mayrand Food Group",
           ].map((news,index) => (
             <div key={index} 
             className="flex item-start gap-4 
@@ -222,7 +222,7 @@ export default function Home() {
               </h3>
 
             <p className="mt-1 text-sm ">
-              June 10
+              June 22, 2026
             </p>
         </div>
         </div>
