@@ -119,17 +119,23 @@ export default function SwiperComponent() {
         </SwiperSlide>
       ))}
     </Swiper>
-    <div className="relative flex items-center justify-center gap-3">
-  
-      <div className="swiper-pagination" />
-
-      <button
-        onClick={toggleAutoplay}
-        className="opacity-70 hover:opacity-100 transition"
-      >
-        {isPlaying ? <HiMiniPause size={18} /> : <HiMiniPlay size={18} />}
-      </button>
-      </div>
+      <div className="relative">
+  <button
+    onClick={toggleAutoplay}
+    className="
+      absolute
+      left-1/2
+      -translate-x-[-50px]
+      -top-6
+      opacity-70
+      hover:opacity-100
+      transition
+      z-10
+    "
+  >
+    {isPlaying ? <HiMiniPause size={18} /> : <HiMiniPlay size={18} />}
+  </button>
+</div>
     </div>
   );
 }

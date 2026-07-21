@@ -12,26 +12,8 @@ export default function Home() {
         {
           name: "DXP Command Centre",
           image: "/NewRB.png",
-          href: "https://techsolutionsdashboards.empireco.ca/dashboard/119df35b-3209-4254-8ba3-4697f3bee82b?selected-page=NzA4NzAyfFZJWnxEQVNIQk9BUkR8NDcwMDYzMjA",
+          href: "https://techsolutionsdashboards.empireco.ca",
           description: "Track, Troubleshoot, and Optimize"
-        },
-        
-        {
-          name: "Place Holder",
-          image: "/",
-          href: "",
-        },
-
-        {
-          name: "Place Holder",
-          image: "/",
-          href: "",
-        },
-
-        {
-          name: "Place Holder",
-          image: "/",
-          href: "",
         },
       ];
 
@@ -55,19 +37,7 @@ export default function Home() {
           <div className="ml-auto mr-6 flex items-center gap-4 md:gap-9 text-sm md:text-base font-bold">
             
           <Link href="/" className="animate-popIn font-medium text-zinc-300 transition hover:text-white">
-            Place Holder
-          </Link>
-
-          <Link href="" className="animate-popIn font-medium text-zinc-300 transition hover:text-white">
-            Place Holder
-          </Link>
-          
-          <Link href="" className="animate-popIn font-medium text-zinc-300 transition hover:text-white">
-            Place Holder
-          </Link>
-          
-          <Link href="https://www.empireco.ca/quarterly-reports" className="animate-popIn font-medium text-zinc-300 transition hover:text-white">
-            Quarterly Reports
+            Banners
           </Link>
           </div>
           <ThemeToggle/>
@@ -96,7 +66,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-8 py-32 md:py-44 pb-20 md:pb-28">
         <h1 className="max-w-2xl animate-fadeUp text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
           Technology Solutions
-        <span className="text-purple-400"> Quick Start</span>
+        <span className="text-purple-400"> Command Center</span>
         </h1>
 
         <div className="animate-fadeUp mt-6 h-1 w-20 rounded-full bg-purple-500" />
